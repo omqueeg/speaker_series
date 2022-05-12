@@ -1,2 +1,2 @@
-# speaker_series
+# Speaker Series
 For my besties who love speakers
