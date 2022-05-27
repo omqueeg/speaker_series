@@ -1,18 +1,12 @@
 # How To RFID
 *For my besties who love RFIDs*
+Start by downloading all the things in this Github and unzipping them!
 
-## The Code
-- mfrc522.py goes in the "lib" folder on your board.
-- code.py goes directly onto the board, in no folder.
+## Setting Up Your Board
+Plug in your boards, then drag the adafruit-circuitpython-itsybitsy_m4_express-en_US-7.3.0.uf2 file into it.
 
-|RFID RC522 | Pico| # on Simplified Pico Diagram |
-|:---:| :---:| :---: |
-|3V3 | 3V3| 36|
-|RST|GP8| 11 |
-|GND|GND| 38 |
-|IRQ| *---*| *--* |
-|MISO| GP4| 06|
-|MOSI| GP7| 10 |
-|SCK|GP6| 09 |
-|SDA|GP5| 05 |
+## The SD Card
 
+## The Speaker
+
+## The RFID Card
