@@ -1,9 +1,9 @@
-# How To Get RFID on your Raspberry Pi Pico
-*For my besties who love RFID*
+# How To RFID
+*For my besties who love RFIDs*
 
 ## The Code
-- mfrc522.py goes in the "lib" folder on your Pico.
-- code.py goes directly onto the Pico, in no folder.
+- mfrc522.py goes in the "lib" folder on your board.
+- code.py goes directly onto the board, in no folder.
 
 |RFID RC522 | Pico| # on Simplified Pico Diagram |
 |:---:| :---:| :---: |
