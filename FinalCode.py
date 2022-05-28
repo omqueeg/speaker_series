@@ -1,14 +1,20 @@
 #Final Code Template
-
-import os
-
-import digitalio
 import board
 import busio
-import mfrc522
-import time
 import sdcardio
 import storage
+
+spi = board.SPI()
+cs = board.D10     # Use the pin you wired to the breakout CS
+
+sdcard = sdcardio.SDCard(spi, cs)
+vfs = storage.VfsFat(sdcard)
+storage.mount(vfs, "/sd")
+
+import os
+import digitalio
+import mfrc522
+import time
 from audioio import AudioOut
 from audiomp3 import MP3Decoder
 
