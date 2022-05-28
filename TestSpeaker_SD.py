@@ -1,23 +1,25 @@
-#SD Card + Speaker test
-
-import digitalio
 import board
 import busio
 import sdcardio
 import storage
+
+spi = board.SPI()
+cs = board.D10     # Use the pin you wired to the breakout CS
+
+sdcard = sdcardio.SDCard(spi, cs)
+vfs = storage.VfsFat(sdcard)
+storage.mount(vfs, "/sd")
+
+#SD Card + Speaker test
+
+import digitalio
 from audioio import AudioOut
 from audiomp3 import MP3Decoder
 
 sck = board.SCK
 mosi = board.MOSI
 miso = board.MISO
-spi = busio.SPI(sck, MOSI=mosi, MISO=miso)
-cs = board.D10
 audio = AudioOut(board.A0)
-
-sdcard = sdcardio.SDCard(spi, cs)
-vfs = storage.VfsFat(sdcard)
-storage.mount(vfs, "/sd")
 
 
 # The listed mp3files will be played in order
